@@ -1,9 +1,12 @@
 # streamlit
-from logging import PlaceHolder
 import streamlit as st
-import streamlit.components.v1 as components
+from streamlit_multipage import MultiPage
 
 questionNum = 0
+
+def saveAnswer(reply):
+  print(reply)
+  MultiPage.save({reply.key: reply})
 
 def htmlHeader():
   st.markdown(
@@ -110,5 +113,8 @@ def addQuestion(question):
     key="reply" + str(questionNum),
     placeholder="질문을 보고 답변을 작성해주세요"
   )
+
+def infoReply(num):
+  return st.session_state['reply' + str(num)]
 
     

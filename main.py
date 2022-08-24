@@ -1,7 +1,6 @@
 # streamlit
 import streamlit as st
-import streamlit.components.v1 as components
-from streamlit_pages.streamlit_pages import MultiPage
+from streamlit_multipage import MultiPage
 
 import random
 import pandas as pd
@@ -13,7 +12,7 @@ questionNumber = 5
 
 questions = pd.read_csv('면접 답안.csv')
 
-def home():
+def home(st, **state):
     loadWebsite.resetQuestion()
 
     randNumList = []
@@ -29,22 +28,22 @@ def home():
 
     loadWebsite.loadHomePage()
 
-def test():
+def test(st, **state):
     loadWebsite.loadTestPage()
 
-def about():
+def about(st, **state):
     loadWebsite.loadAboutPage()
 
-def result():
+def result(st, **state):
     loadWebsite.resetScoreList()
 
     for i in range(questionNumber):
-        replyScore = deriveResult.score(st.session_state['reply' + str(i+1)])
+        replyScore = deriveResult.score(loadWebsite.infoReply(i+1))
         replyIdx = loadWebsite.infoQuestion(i, 'idx')
 
         loadWebsite.addScore({
             'originQuestion':   [replyIdx, loadWebsite.infoQuestion(i, 'str')],
-            'replyAnswer':      deriveResult.drawColor(st.session_state['reply' + str(i+1)]),
+            'replyAnswer':      deriveResult.drawColor(loadWebsite.infoReply(i+1)),
             
             'gradingResult': {
                 'replyScore': replyScore,
@@ -59,10 +58,11 @@ def result():
     loadWebsite.loadResultPage()
 
 app = MultiPage()
+app.st = st
 
-app.add_page("Home", home)
-app.add_page("Test", test)
-app.add_page("About", about)
-app.add_page("Result", result)
+app.add_app("Home", home)
+app.add_app("Test", test)
+app.add_app("About", about)
+app.add_app("Result", result)
 
 app.run()

@@ -131,10 +131,10 @@ def addQuestion(idx, str):
 def infoQuestion(idx, type):
     global questionList
 
-    if type == 'idx':
-        return questionList[idx][0]
-    elif type == 'str':
-        return questionList[idx][1]
+    if idx >= len(questionList):
+        return 0 if type == 'idx' else ''
+
+    return questionList[idx][0 if type == 'idx' else 1]
 
 def resetScoreList():
     global scoreList
@@ -143,3 +143,6 @@ def resetScoreList():
 def addScore(scoreDict):
     global scoreList
     scoreList.append(scoreDict)
+
+def infoReply(num):
+  return html_test.infoReply(num)
