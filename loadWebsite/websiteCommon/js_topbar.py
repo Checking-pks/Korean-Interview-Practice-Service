@@ -18,5 +18,7 @@ window.onload = function() {
 
     var rightBelowStreamlitLogo = top.document.querySelector("#root > div > div > div > a");
     rightBelowStreamlitLogo.style.display = 'none';
+
+    top.document.title = "Deep Summary";
 }
 </script>"""
