@@ -48,7 +48,7 @@ def returnJs(scoreList: dict):
     result = """
 <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
 <script type="text/javascript">
-    var radarDom = document.getElementById('radar');
+    var radarDom = parent.document.getElementById('radar');
     var radarChart = echarts.init(radarDom, null, {
     renderer: 'canvas',
     useDirtyRect: false
@@ -108,7 +108,7 @@ def returnJs(scoreList: dict):
         ]
     };
 
-    var gaugeDom = document.getElementById('gauge');
+    var gaugeDom = parent.document.getElementById('gauge');
     var gaugeChart = echarts.init(gaugeDom, null, {
       renderer: 'canvas',
       useDirtyRect: false
@@ -238,8 +238,8 @@ def returnJs(scoreList: dict):
         radarChart.setOption(radarOption);
     }
 
-    window.addEventListener('resize', gaugeChart.resize);
-    window.addEventListener('resize', radarChart.resize);
+    parent.window.addEventListener('resize', gaugeChart.resize);
+    parent.window.addEventListener('resize', radarChart.resize);
 </script>"""
 
     return result
