@@ -3,8 +3,8 @@ def returnJs():
 <script>
 window.addEventListener('load', function() {
     setTimeout(function(){
-        var textArea = top.document.getElementsByClassName("stTextArea");
-        var ta = top.document.querySelectorAll("textarea");
+        var textArea = document.getElementsByClassName("stTextArea");
+        var ta = document.querySelectorAll("textarea");
 
         console.log(textArea.length);
         console.log(ta.length);
@@ -13,11 +13,11 @@ window.addEventListener('load', function() {
             ta[i].placeholder = "질문에 대한 답변을 적어주세요";
         }
 
-        var submitResultButton = top.document.querySelector(".u-btn");
+        var submitResultButton = document.querySelector(".u-btn");
     
         submitResultButton.addEventListener("click", ()=> {
-            top.document.querySelector("section").scrollTo(0, 0);
-            top.document.querySelectorAll(".stButton > button")[3].click();
+            document.querySelector("section").scrollTo(0, 0);
+            document.querySelectorAll(".stButton > button")[3].click();
         });
     }, 10);
 })

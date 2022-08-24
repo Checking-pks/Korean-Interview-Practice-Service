@@ -2,9 +2,9 @@ def returnJs():
     return """
 <script>
 window.onload = function() {
-    var logo = top.document.getElementsByClassName("u-image u-logo u-image-1")[0];
-    var pages = top.document.querySelectorAll(".stButton > button");
-    var topBar = top.document.querySelectorAll(".u-nav-item > button.u-nav-link");
+    var logo = document.getElementsByClassName("u-image u-logo u-image-1")[0];
+    var pages = document.querySelectorAll(".stButton > button");
+    var topBar = document.querySelectorAll(".u-nav-item > button.u-nav-link");
     
     logo.addEventListener("click", ()=> {pages[6].click()});
 
