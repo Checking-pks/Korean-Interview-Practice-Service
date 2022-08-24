@@ -5,7 +5,7 @@ from streamlit_multipage import MultiPage
 import random
 import pandas as pd
 
-from . import loadWebsite, deriveResult
+import loadWebsite, deriveResult
 
 questionNumber = 5
 
@@ -59,9 +59,9 @@ def result(st, **state):
 app = MultiPage()
 app.st = st
 
-app.add_app("Result", result)
-app.add_app("About", about)
-app.add_app("Test", test)
 app.add_app("Home", home)
+app.add_app("Test", test)
+app.add_app("About", about)
+app.add_app("Result", result)
 
 app.run()

@@ -17,7 +17,7 @@ window.addEventListener('load', function() {
     
         submitResultButton.addEventListener("click", ()=> {
             parent.document.querySelector("section").scrollTo(0, 0);
-            parent.document.querySelectorAll(".stButton > button")[3].click();
+            parent.document.querySelectorAll(".stButton > button")[6].click();
         });
     }, 10);
 })
