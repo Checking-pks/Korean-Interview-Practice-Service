@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
     
     startTestButton.addEventListener("click", ()=> {
         top.document.querySelector("section").scrollTo(0, 0);
-        top.document.querySelectorAll(".stButton > button")[4].click();
+        top.document.querySelectorAll(".stButton > button")[5].click();
     });
 })
 </script>"""
