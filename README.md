@@ -27,7 +27,7 @@ protobuf==3.20.1
 default-jre
 ```
 
-## 💻 <a href="https://checking-pks-korean-interview-practice-service-main-67wxe4.streamlitapp.com/" target="_blank">Website [Link]</a>
+## 💻 [Website [Link]](https://checking-pks-korean-interview-practice-service-main-67wxe4.streamlitapp.com/){:target="_blank"}
 
 ### - Main Page
 <img src="https://i.ibb.co/VwZccNP/Main.png" alt="Main Page" style="border-radius:10px;border: solid 1px #cccccc;">
