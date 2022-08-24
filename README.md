@@ -27,7 +27,7 @@ protobuf==3.20.1
 default-jre
 ```
 
-## 💻 <a href="https://checking-pks-korean-interview-practice-service-main-67wxe4.streamlitapp.com/" target="blank_">Website [Link]</a> ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fchecking-pks-korean-interview-practice-service-main-67wxe4.streamlitapp.com&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
+## 💻 <a href="https://checking-pks-korean-interview-practice-service-main-67wxe4.streamlitapp.com/" target="_blank">Website [Link]</a>
 
 ### - Main Page
 <img src="https://i.ibb.co/VwZccNP/Main.png" alt="Main Page" style="border-radius:10px;border: solid 1px #cccccc;">
