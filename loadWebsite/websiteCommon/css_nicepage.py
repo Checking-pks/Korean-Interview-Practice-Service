@@ -7,7 +7,7 @@ def returnCss():
  * Copyright 2014-2021 Froala Labs
  */
 
-.stAlert, .reportview-container > section:first-child, .stHorizontalBlock, header:not(.u-header), footer:not(.u-footer), iframe{
+.stAlert, .reportview-container > section:first-child, .stHorizontalBlock, #root > div > div > div > a, header:not(.u-header), footer:not(.u-footer), iframe{
   display: none;
   margin: 0;
   padding: 0;
