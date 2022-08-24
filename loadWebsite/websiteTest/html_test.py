@@ -115,6 +115,9 @@ def addQuestion(question):
   )
 
 def infoReply(num):
-  return st.session_state['reply' + str(num)]
+  try:
+    return st.session_state['reply' + str(num)]
+  except:
+    return ''
 
     
