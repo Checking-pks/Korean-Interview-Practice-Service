@@ -5,8 +5,7 @@ from streamlit_multipage import MultiPage
 import random
 import pandas as pd
 
-import loadWebsite
-import deriveResult
+from . import loadWebsite, deriveResult
 
 questionNumber = 5
 

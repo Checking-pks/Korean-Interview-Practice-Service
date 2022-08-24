@@ -1,5 +1,5 @@
-import deriveResult.RNN as RNN
-import deriveResult.findKeyword as findKeyword
+from . import RNN as RNN
+from . import findKeyword as findKeyword
 
 def score(str):
     return RNN.totalscore(str)

@@ -3,11 +3,11 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 # Web Design
-from loadWebsite.websiteCommon import css_nicepage, js_topbar
-from loadWebsite.websiteMain   import html_main, css_main, js_main
-from loadWebsite.websiteTest   import html_test, css_test, js_test
-from loadWebsite.websiteAbout  import html_about, css_about
-from loadWebsite.websiteResult import html_result, css_result, js_result
+from .websiteCommon import css_nicepage, js_topbar
+from .websiteMain   import html_main, css_main, js_main
+from .websiteTest   import html_test, css_test, js_test
+from .websiteAbout  import html_about, css_about
+from .websiteResult import html_result, css_result, js_result
 
 questionList = []
 scoreList = []
