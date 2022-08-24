@@ -15,5 +15,8 @@ window.onload = function() {
     topBar[3].addEventListener("click", ()=> {pages[3].click()});
     topBar[4].addEventListener("click", ()=> {pages[4].click()});
     topBar[5].addEventListener("click", ()=> {pages[5].click()});
+
+    var rightBelowStreamlitLogo = top.document.querySelector("#root > div > div > div > a");
+    rightBelowStreamlitLogo.style.display = 'none';
 }
 </script>"""
