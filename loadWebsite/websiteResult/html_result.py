@@ -140,7 +140,7 @@ def returnHtml(scoreList):
     result += """
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <div class="u-text u-text-result-number">- """ + key + """</div>
-                    <pre class="u-text u-text-result-reply">""" + advice[key][0] + """</pre>
+                    <pre class="u-text u-text-result-reply">""" + advice[key] + """</pre>
                   </div>"""
   
   result += """
