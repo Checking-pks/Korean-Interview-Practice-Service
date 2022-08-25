@@ -42,7 +42,7 @@ def result(st, **state):
 
         loadWebsite.addScore({
             'originQuestion':   [replyIdx, loadWebsite.infoQuestion(i, 'str')],
-            'replyAnswer':      deriveResult.drawColor(loadWebsite.infoReply(i+1)),
+            'replyAnswer':      deriveResult.drawBlueColor(loadWebsite.infoReply(i+1)),
             
             'gradingResult': {
                 'replyScore': replyScore,
