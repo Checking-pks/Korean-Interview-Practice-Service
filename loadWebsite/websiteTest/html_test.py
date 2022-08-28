@@ -5,7 +5,6 @@ from streamlit_multipage import MultiPage
 questionNum = 0
 
 def saveAnswer(reply):
-  print(reply)
   MultiPage.save({reply.key: reply})
 
 def htmlHeader():

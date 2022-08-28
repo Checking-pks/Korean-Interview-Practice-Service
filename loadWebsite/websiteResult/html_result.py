@@ -50,8 +50,6 @@ def returnHtml(scoreList):
   else:
     averageRank = 'F'
 
-  print(score)
-
   result = """
 <body class="u-body u-xl-mode u-responsive-xl"><header class="u-clearfix u-header u-header" id="sec-d9ff"><div class="u-clearfix u-sheet u-sheet-1">
         <button data-page-id="459313545" class="u-image u-logo u-image-1" data-image-width="412" data-image-height="74" title="Main">

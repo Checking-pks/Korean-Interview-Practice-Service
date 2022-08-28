@@ -7,12 +7,14 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 
-
 #모범답안 키워드 리스트 로드
 def load_keywordslist():
     with open("deriveResult/list.pickle","rb") as f:
         keywordlist = pickle.load(f)
     return keywordlist
+
+keywordlist = load_keywordslist()
+model = SentenceTransformer('sentence-transformers/xlm-r-100langs-bert-base-nli-stsb-mean-tokens')
 
 #키워드 리스트와 문장 비교 문장마다 키워드가 절반 이상 있을 시 글씨색을 파란색으로 반환
 def comparekeyword(sentence, keywordlist):
@@ -26,7 +28,6 @@ def comparekeyword(sentence, keywordlist):
 #input= 문단
 #사용시 글자 색상 적용 후 다시 string으로 반환
 def find_goodsentence(x):
-    keywordlist=load_keywordslist()
     sentence_list=[]
     splittext=x.split('.')
     splittext = [v for v in splittext if v] #공백 제거
@@ -43,7 +44,6 @@ def find_keyword(doc):
     n_gram_range = (1, 1)
     count = CountVectorizer(ngram_range=n_gram_range).fit([tokenized_nouns])
     candidates = count.get_feature_names()
-    model = SentenceTransformer('sentence-transformers/xlm-r-100langs-bert-base-nli-stsb-mean-tokens')
     doc_embedding = model.encode([doc])
     candidate_embeddings = model.encode(candidates)
     top_n = 10
